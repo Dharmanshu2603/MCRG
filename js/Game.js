@@ -88,15 +88,15 @@ class Game {
         console.log(displayHeight)
         console.log(  player.distance  )
             if(player.distance < 3700){
-              if(keyIsDown(38) && player.index !== null){
+              if((keyIsDown(38) || keyIsDown(87)) && player.index !== null){
                   yVel += 0.9;
-                  if(keyIsDown(37)){
+                  if(keyIsDown(37)||keyIsDown(65) ){
                       xVel -= 0.2;
                   }
-                  if(keyIsDown(39)){
+                  if(keyIsDown(39)|| keyIsDown(68)){
                       xVel += 0.2;
                   }
-              }else if(keyIsDown(38) && yVel > 0 && player.index !== null){
+              }else if((keyIsDown(38) || keyIsDown(87) )&& yVel > 0 && player.index !== null){
                   yVel -= 0.1;
                   xVel *= 0.9;
               }else{
