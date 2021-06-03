@@ -60,6 +60,7 @@ function setup(){
 function draw(){
    //start the game
    background(0, 240, 255);
+  console.log("mouse.x + mouse.y");
   if (playerCount === 4 && finishedPlayers === 0) {
     game.update(1);
   }
