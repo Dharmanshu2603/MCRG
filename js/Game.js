@@ -85,7 +85,7 @@ class Game {
               }
         
             }
-        console.log(displayHeight)
+      //  console.log(displayHeight)
         console.log(  player.distance  )
             if(player.distance < 3700){
               if((keyIsDown(38) || keyIsDown(87)) && player.index !== null){
@@ -104,7 +104,7 @@ class Game {
                   xVel *= 0.985;
               }
             }else if(passedFinish === false){
-            yVel *= 0.8;
+              yVel *= 0.8;
               xVel *= 0.8;
               Player.updateFinishedPlayers();
               player.place = finishedPlayers;
@@ -119,7 +119,7 @@ class Game {
         
           //move the car
           player.distance += yVel;
-          yVel *= 0.98;
+          yVel *= 0.985;
           player.xPos += xVel;
           xVel *= 0.985;
           player.update();
